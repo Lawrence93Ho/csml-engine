@@ -1,7 +1,7 @@
 {
     "name": "CSML Engine",
     "description": "CSML Engine buildpack for heroku deployments",
-    "repository": "https://github.com/CSML-by-Clevy/csml-engine/tree/master",
+    "repository": "https://github.com/Lawrence93Ho/csml-engine/tree/dev",
     "success_url": "/",
     "keywords": ["rust", "csml"],
     "website": "https://www.csml.dev/",
