@@ -134,7 +134,7 @@ MODULES_AUTH= # default module auth token
 
 ### Deploy to Heroku
 
-<a href="https://heroku.com/deploy?template=https://github.com/CSML-by-Clevy/csml-engine/tree/master">
+<a href="https://heroku.com/deploy?template=https://github.com/Lawrence93Ho/csml-engine/tree/dev">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
 </a>
 
