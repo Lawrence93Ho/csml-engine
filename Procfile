@@ -1,1 +1,1 @@
-web: ./csml-server-linux-amd64
+web: ENGINE_SERVER_PORT=$PORT POSTGRESQL_URL=$DATABASE_URL ./csml-server-linux-amd64
