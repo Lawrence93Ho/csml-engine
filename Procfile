@@ -1,1 +1,1 @@
-web: ENGINE_SERVER_PORT=$PORT ./csml-server-linux-amd64
+web: ./csml-server-linux-amd64

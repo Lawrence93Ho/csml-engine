@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Find all the directories we might need (based on
+# heroku-buildpack-nodejs code).
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
+
+
+# Set defaults for our configuration variables.  Stable Rust is sufficiently
+# stable at this point that I think we can just default it.
+VERSION=stable
+
+# If your Rust code is not at the root directory of the repository, specify a
+# `BUILD_PATH` to the correct directory in the `RustConfig`
+BUILD_PATH=""
+
+echo "-----> Get DOWNLOAD_URL"
+cd "$BUILD_DIR/$BUILD_PATH"
+
+DOWNLOAD_URL=$(curl https://api.github.com/repos/CSML-by-Clevy/csml-engine/releases/latest | grep browser_download_url | grep csml-server-linux-amd64 | cut -d '"' -f 4)
+echo "-----> Get bin"
+curl -L "$DOWNLOAD_URL" > csml-server-linux-amd64
+
+echo "-----> Set permissions"
+chmod 755 csml-server-linux-amd64
