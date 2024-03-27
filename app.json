@@ -40,7 +40,7 @@
     },
     "buildpacks": [
         {
-          "url": "https://github.com/Lawrence93Ho/csml-engine/tree/dev/heroku-buildpack-csml"
+          "url": "https://github.com/Lawrence93Ho/heroku-buildpack-csml"
         }
     ]
 }
